@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api/';
 
 const Register = () => {
   const [form, setForm] = useState({ email: '', username: '', password: '' });
@@ -21,7 +22,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:8000/api/auth/register/', form);
+      await axios.post(`${API_URL}auth/register/`, form);
       alert('Registration successful!');
     } catch (err) {
       alert('Registration failed.');
