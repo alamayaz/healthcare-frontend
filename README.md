@@ -106,6 +106,6 @@ And CORS is enabled for `http://localhost:3000` in your Django settings.
 
 ## 🙌 Author
 
-Built by **Aarish Alam**  
+Built by **Ayaz Alam**  
 Frontend powered by React + Tailwind ✨  
 Feel free to fork, star ⭐, and contribute!
