@@ -1,9 +1,13 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api/';
 
 const API = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api/',
+  baseURL: API_URL,
+  headers: {
+    'ngrok-skip-browser-warning': 'true'
+  }
 });
 
 // Add token to headers

@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8000/api/';
 
 const Login = () => {
   const [form, setForm] = useState({ username: '', password: '' });
@@ -22,7 +23,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/auth/login/', form);
+      const res = await axios.post(`${API_URL}auth/login/`, form);
       localStorage.setItem('access_token', res.data.access);
       toast.success('Login successful!');
       navigate('/dashboard');
