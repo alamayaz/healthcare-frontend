@@ -100,7 +100,7 @@ And CORS is enabled for `http://localhost:3000` in your Django settings.
 
 ## 🔗 Related Repositories
 
-- 🛠️ Backend: [healthcare-backend](https://github.com/yourusername/healthcare-backend)
+- 🛠️ Backend: [healthcare-backend](https://github.com/alamayaz/healthcare-backend)
 
 ---
 
